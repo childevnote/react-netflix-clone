@@ -1,0 +1,53 @@
+.search-container {
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  width: 100%; 
+  padding: 2rem 0; 
+  z-index: 1;
+}
+
+.movie {
+  padding-top: 70px;
+  flex-basis: calc(50% - 2rem); /* 기본 2열 배치 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .movie {
+    flex-basis: calc(33.33% - 2rem); /* 화면 크기 768px 이상에서 3열 배치 */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .movie {
+    flex-basis: calc(25% - 2rem); /* 화면 크기 1024px 이상에서 4열 배치 */
+  }
+}
+
+.movie__column-poster {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.movie__column-poster:hover {
+  transform: scale(1.1);
+}
+
+.movie__poster {
+  width: 90%;
+  border-radius: 5px;
+}
+
+.no-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c5c5c5;
+  height: 100vh;
+  padding: 8rem;
+}
